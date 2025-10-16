@@ -1,0 +1,16 @@
+{
+  "root": "watchme",
+  "generated_at": "2025-10-16T18:32:47Z",
+  "changes": {
+    "added": [
+      "example.txt"
+    ],
+    "removed": [
+      "old_file.txt"
+    ],
+    "modified": [
+      "notes.docx"
+    ],
+    "metadata_changed": []
+  }
+}
