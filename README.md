@@ -15,22 +15,22 @@
 ## 1. Initialize a baseline
  - No external libraries — the entire project uses Python’s standard library
  - ```bash
-git clone https://github.com/kateserem/file-integrity-monitoring.git
-cd file-integrity-monitoring
+    git clone https://github.com/kateserem/file-integrity-monitoring.git
+    cd file-integrity-monitoring
 
 ## 2. Run a Scan
- - python -m file_integrity_monitoring.main "watchme" scan
- - 
+    python -m file_integrity_monitoring.main "watchme" scan
+   
 ## 3. Detect Ignored Files
- - *.log
- - temp*
- - then scan with: python -m file_integrity_monitoring.main "watchme" scan --ignore "watchme/ignore.csv"
- - 
+    *.log
+    temp*
+    then scan with: python -m file_integrity_monitoring.main "watchme" scan --ignore "watchme/ignore.csv"
+  
 ## 4. Continuous Monitoring
- - python -m file_integrity_monitoring.main "watchme" monitor --interval 5 -o fim_log.ndjson --ndjson --append
+    python -m file_integrity_monitoring.main "watchme" monitor --interval 5 -o fim_log.ndjson --ndjson --append
 
 ## 5. Accept Current State
- - python -m file_integrity_monitoring.main "watchme" accept
+    python -m file_integrity_monitoring.main "watchme" accept
 
 # Example Output 
 
@@ -78,21 +78,23 @@ cd file-integrity-monitoring
 
 # Example Workflow
   # 1. Create baseline
-  python -m file_integrity_monitoring.main "watchme" init
+    python -m file_integrity_monitoring.main "watchme" init
   
   # 2. Edit or delete a file
-  echo "new line" >> watchme/file1.txt
+    echo "new line" >> watchme/file1.txt
   
   # 3. Scan for changes
-  python -m file_integrity_monitoring.main "watchme" scan
+    python -m file_integrity_monitoring.main "watchme" scan
   
   # 4. Ignore temp files
-  python -m file_integrity_monitoring.main "watchme" init --ignore "watchme/ignore.csv"
+    python -m file_integrity_monitoring.main "watchme" init --ignore "watchme/ignore.csv"
   
   # 5. Continuous monitor
-  python -m file_integrity_monitoring.main "watchme" monitor --interval 5
+    python -m file_integrity_monitoring.main "watchme" monitor --interval 5
 
 # Author
   Kate Serem
+  
   Computer Engineering and Cybersecurity
-  Texas A&M
+  
+  Texas A&M University
