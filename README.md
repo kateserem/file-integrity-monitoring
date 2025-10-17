@@ -49,32 +49,32 @@ cd file-integrity-monitoring
     {"root": "watchme", "generated_at": "2025-10-16T18:32:47Z", "changes": {"added": ["example.txt"], "removed": ["old_file.txt"], "modified": ["notes.docx"], "metadata_changed": []}}
 
 # Folder Structure
-  file-integrity-monitoring/
-  │
-  ├── file_integrity_monitoring/
-  │   ├── baseline.py
-  │   ├── hasher.py
-  │   ├── ignore.py
-  │   ├── reporter.py
-  │   └── main.py
-  │
-  ├── watchme/
-  │   ├── file1.txt
-  │   └── ignore.csv
-  │
-  ├── sample_fim_log_pretty.json
-  └── README.md
+    file-integrity-monitoring/
+    │
+    ├── file_integrity_monitoring/
+    │   ├── baseline.py
+    │   ├── hasher.py
+    │   ├── ignore.py
+    │   ├── reporter.py
+    │   └── main.py
+    │
+    ├── watchme/
+    │   ├── file1.txt
+    │   └── ignore.csv
+    │
+    ├── sample_fim_log_pretty.json
+    └── README.md
 
   # How it Works
-        | Function              | Description                             |
-  | --------------------- | --------------------------------------------- |
-  | `walk_and_hash()`     | walks through files, computing SHA-256 hashes |
-  | `save_baseline()`     | saves baseline snapshot to JSON               |
-  | `load_baseline()`     | loads an existing baseline for comparison     |
-  | `compare_snapshots()` | finds added, removed, or modified files       |
-  | `print_summary()`     | prints readable scan summary                  |
-  | `save_report()`       | exports JSON/NDJSON results                   |
-  | `_now_iso()`          | returns UTC timestamp in ISO format           |
+          | Function              | Description                             |
+    | --------------------- | --------------------------------------------- |
+    | `walk_and_hash()`     | walks through files, computing SHA-256 hashes |
+    | `save_baseline()`     | saves baseline snapshot to JSON               |
+    | `load_baseline()`     | loads an existing baseline for comparison     |
+    | `compare_snapshots()` | finds added, removed, or modified files       |
+    | `print_summary()`     | prints readable scan summary                  |
+    | `save_report()`       | exports JSON/NDJSON results                   |
+    | `_now_iso()`          | returns UTC timestamp in ISO format           |
 
 # Example Workflow
   # 1. Create baseline
